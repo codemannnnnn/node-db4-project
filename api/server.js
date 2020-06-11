@@ -3,7 +3,7 @@ const recRouter = require("../recipes/recipe-router.js");
 const server = express();
 
 server.use(express.json());
-server.use("api/recipe", recRouter);
+server.use("/api/recipe", recRouter);
 
 server.use("/", (req, res) => {
   res.json("Your API is up and running!");
